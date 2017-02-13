@@ -12,6 +12,7 @@ import { InfoBar } from 'components';
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
+// На главный компонент вешаем ссылку на контейнер для виджетов
 
 @asyncConnect([{
   promise: ({store: {dispatch, getState}}) => {
@@ -104,6 +105,10 @@ export default class App extends Component {
                   Logout
                 </NavItem>
               </LinkContainer>}
+
+              <LinkContainer to="/weather-widgets">
+                  <NavItem eventKey={8}>weather widgets</NavItem>
+              </LinkContainer>
             </Nav>
             {user &&
             <p className={styles.loggedInMessage + ' navbar-text'}>Logged in as <strong>{user.name}</strong>.</p>}

@@ -8,3 +8,6 @@ export LoginSuccess from './LoginSuccess/LoginSuccess';
 export Survey from './Survey/Survey';
 export NotFound from './NotFound/NotFound';
 export Pagination from './Pagination/Pagination';
+
+/* Контейнер для отображение погодных виджетов */
+export WeatherWidgetsConstructor from './WeatherWidgetsConstructor/WeatherWidgetsConstructor';
