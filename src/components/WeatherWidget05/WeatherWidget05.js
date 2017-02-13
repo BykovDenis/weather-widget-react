@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import Mechanic from './mechanicAPI';
 
 export default
 class WeatherWidget05 extends Component {
 
   render() {
     const widgetStyle = require('./WeatherWidget05.scss');
-    const mechanicAPI = new Mechanic();
-    mechanicAPI.responseWeatherData();
     return (
       <div className={widgetStyle.widget}>
         <div className={widgetStyle.header}>
