@@ -16,18 +16,24 @@ export default class WeatherWidgetsConstructor extends Component {
   }
   componentDidMount() {
     const mechanicAPI = new Mechanic();
-    mechanicAPI.responseWeatherData();
-    console.log('JSON' + mechanicAPI.weafterData);
+    const responseWeatherData = () => mechanicAPI.responseWeatherData(this, this.initialMeans);
+    responseWeatherData();
+  }
+  initialMeans(context, data) {
+    context.setState({
+      weather: {
+        cityName: data.name,
+        country: data.sys.country,
+        temperature: parseInt(data.main.temp.toFixed(0), 10) + 0
+      }
+    });
   }
   render() {
-    if (this.state) {
-      console.log(this.state);
-    }
     return (
       <div>
         <h1>Контейнер для виджетов</h1>
         <WeatherWidget/>
-        <WeatherWidget05/>
+        <WeatherWidget05 attrWeather= {this.state.weather}/>
       </div>
     );
   }

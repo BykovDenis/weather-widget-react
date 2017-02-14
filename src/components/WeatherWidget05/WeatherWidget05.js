@@ -1,22 +1,30 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 export default
 class WeatherWidget05 extends Component {
-
+  static propTypes = {
+    attrWeather: PropTypes.object.isRequired
+  };
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount() {
+    console.dir(this.props);
+  }
   render() {
     const widgetStyle = require('./WeatherWidget05.scss');
     return (
       <div className={widgetStyle.widget}>
         <div className={widgetStyle.header}>
           <div className={widgetStyle.layout}>
-            <h1 className={widgetStyle.title}>Moscow, RU</h1>
+            <h1 className={widgetStyle.title}>{`${this.props.attrWeather.cityName}, ${this.props.attrWeather.country}`}</h1>
             <p className={widgetStyle.description}>shower snow</p>
           </div>
           <img width="128" height="128" alt="Weather in Moscow, RU" className={widgetStyle.icon} src="http://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/13d.png" />
         </div>
         <div className={widgetStyle.weather}>
           <div className={widgetStyle.weather__layout}>
-            <div className={widgetStyle.weather__temperature}>-8<span>°</span></div>
+            <div className={widgetStyle.weather__temperature}>{this.props.attrWeather.temperature}<span>°</span></div>
             <div>
               <div className={widgetStyle.weatherCard}>
                 <table className={widgetStyle.weatherTable}>
