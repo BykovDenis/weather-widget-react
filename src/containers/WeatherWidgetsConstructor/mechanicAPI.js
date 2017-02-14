@@ -1,5 +1,8 @@
 export default class MechanicAPI {
 
+  constructor() {
+    this.weather = {};
+  }
   /**
    * Запрос к серверу для получения данных о погоде
    * @param url
@@ -11,7 +14,6 @@ export default class MechanicAPI {
       .then((response) => response.json())
       .then((data)=> this.prepareData(data));
   }
-
   /**
    * Формирование запроса к серверу для получения данных погоды
    */
@@ -20,14 +22,28 @@ export default class MechanicAPI {
     console.log('Вызов метода');
     this.httpGet(url);
   }
-
   /**
    * Получение данных от сервера с данными о погоде
    * @param data
    * @returns {*}
    */
   prepareData(data) {
+    this.weafterData = data;
     return data;
+  }
+  /**
+   * сеттер для инициализации данных о погоде
+   * @param value
+   */
+  set weafterData(value) {
+    this.weather = value;
+  }
+  /**
+   * геттер для получения данных о погоде
+   * @returns {*|{}}
+   */
+  get weatherData() {
+    return this.weather;
   }
 }
 
