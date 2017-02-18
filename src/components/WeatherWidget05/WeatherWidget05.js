@@ -33,15 +33,15 @@ class WeatherWidget05 extends Component {
                   </tr>
                   <tr className={widgetStyle.weatherTable__items}>
                     <td className={widgetStyle.weatherTable__item}>Feels like</td>
-                    <td className={widgetStyle.weatherTable__item + ' weather-right__feels'}>-8<span>°</span></td>
+                    <td className={widgetStyle.weatherTable__item + ' weather-right__feels'}>{this.props.attrWeather.temperature}<span>°</span></td>
                   </tr>
                   <tr className={widgetStyle.weatherTable__items}>
                     <td className={widgetStyle.weatherTable__item}>Wind</td>
-                    <td className={widgetStyle.weatherTable__item + ' weather-right__wind-speed'}>3 m/s West</td>
+                    <td className={widgetStyle.weatherTable__item + ' weather-right__wind-speed'}>{this.props.attrWeather.windSpeed}</td>
                   </tr>
                   <tr className={widgetStyle.weatherTable__items}>
                     <td className={widgetStyle.weatherTable__item}>Humidity</td>
-                    <td className={widgetStyle.weatherTable__item + ' weather-right__humidity'}>85%</td>
+                    <td className={widgetStyle.weatherTable__item + ' weather-right__humidity'}>{this.props.attrWeather.humidity}</td>
                   </tr>
                   <tr className={widgetStyle.weatherTable__items}>
                     <td className={widgetStyle.weatherTable__item}>Precip</td>
@@ -49,7 +49,7 @@ class WeatherWidget05 extends Component {
                   </tr>
                   <tr className={widgetStyle.weatherTable__items}>
                     <td className={widgetStyle.weatherTable__item}>Pressure</td>
-                    <td className={widgetStyle.weatherTable__item + ' weather-right__pressure'}>1023 mb</td>
+                    <td className={widgetStyle.weatherTable__item + ' weather-right__pressure'}>{this.props.attrWeather.pressure}</td>
                   </tr>
                   </tbody></table>
               </div>

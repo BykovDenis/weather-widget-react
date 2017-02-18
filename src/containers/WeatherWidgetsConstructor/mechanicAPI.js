@@ -1,7 +1,24 @@
+// Основные погодные данные
+import * as weather from './weather-forecast';
+
+// Данные о природных явлениях
+import * as naturalPhenomenon from './natural-phenomenon-data';
+// Данные о ветре
+import * as windSpeed from './wind-speed-data';
+// Данные о направлении ветра
+import * as windDirection from './wind-direction-data';
+
+
 export default class MechanicAPI {
 
   constructor() {
     this.weather = {};
+    this.lang = 'en';
+    // Определяем погодные даннные изначально
+    this.weather.fromAPI = weather.weatherLightCold;
+    this.weather.naturalPhenomenon = naturalPhenomenon.naturalPhenomenon[this.lang];
+    this.weather.windSpeed = windSpeed.windSpeed[this.lang];
+    this.weather.windDirection = windDirection.windDirection[this.lang];
   }
   /**
    * Запрос к серверу для получения данных о погоде
@@ -17,8 +34,11 @@ export default class MechanicAPI {
    * Формирование запроса к серверу для получения данных погоды
    */
   responseWeatherData(context, callback) {
-    const url = 'http://api.openweathermap.org/data/2.5/weather?id=524901&units=metric&appid=2d90837ddbaeda36ab487f257829b667';
-    this.httpGet(url, context, callback);
+    /* выключаю на время отсутствия интернета */
+    /* const url = 'http://api.openweathermap.org/data/2.5/weather?id=524901&units=metric&appid=2d90837ddbaeda36ab487f257829b667';
+    this.httpGet(url, context, callback); */
+    /* локальная переменная с данными для ренеринга */
+    this.prepareData(this.weather, context, callback);
   }
   /**
    * Получение данных от сервера с данными о погоде
