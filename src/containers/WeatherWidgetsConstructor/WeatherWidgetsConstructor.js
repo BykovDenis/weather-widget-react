@@ -16,8 +16,7 @@ export default class WeatherWidgetsConstructor extends Component {
   }
   componentDidMount() {
     const mechanicAPI = new Mechanic();
-    const responseWeatherData = () => mechanicAPI.responseWeatherData(this, this.initialMeans);
-    responseWeatherData();
+    mechanicAPI.responseWeatherData(this, this.initialMeans);
   }
   /**
    * Метод возвращает родительский селектор по значению дочернего узла в JSON
