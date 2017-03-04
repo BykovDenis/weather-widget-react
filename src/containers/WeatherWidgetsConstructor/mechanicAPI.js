@@ -1,12 +1,11 @@
 // Основные погодные данные
-import * as weather from './weather-forecast';
-
+import * as weather from './dataAPI/weather-forecast';
 // Данные о природных явлениях
-import * as naturalPhenomenon from './natural-phenomenon-data';
+import * as naturalPhenomenon from './dataAPI/natural-phenomenon-data';
 // Данные о ветре
-import * as windSpeed from './wind-speed-data';
+import * as windSpeed from './dataAPI/wind-speed-data';
 // Данные о направлении ветра
-import * as windDirection from './wind-direction-data';
+import * as windDirection from './dataAPI/wind-direction-data';
 
 
 export default class MechanicAPI {
