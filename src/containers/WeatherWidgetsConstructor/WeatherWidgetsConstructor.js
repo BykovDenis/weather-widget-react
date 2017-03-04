@@ -2,8 +2,8 @@
  * Created by Denis on 13.02.2017.
  */
 import React, {Component, PropTypes} from 'react';
-import { WeatherWidget } from 'components';
 import { WeatherWidget05 } from 'components';
+import { WeatherWidget15 } from 'components';
 import {connect} from 'react-redux';
 import { getDataWeather } from './actions/weather';
 
@@ -19,11 +19,14 @@ export default class WeatherWidgetsConstructor extends Component {
     this.props.getWeather();
   }
   render() {
+    const widgetStyle = require('./WeatherWidgetsConstructor.scss');
     return (
       <div>
-        <h1>Контейнер для виджетов</h1>
-        <WeatherWidget/>
-        <WeatherWidget05 attrWeather= {this.props.currentStore.weather}/>
+        <h1 className={widgetStyle.widgetTitle}>Контейнер для виджетов</h1>
+        <div className={widgetStyle.container}>
+          <WeatherWidget05 attrWeather= {this.props.currentStore.weather}/>
+          <WeatherWidget15 attrWeather= {this.props.currentStore.weather}/>
+        </div>
       </div>
     );
   }
