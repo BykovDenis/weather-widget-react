@@ -1,10 +1,5 @@
 @import '../../theme/styles';
-@import "./blocks/widget";
-@import "./blocks/layout";
-@import "./blocks/header";
-@import "./blocks/title";
-@import "./blocks/menu";
-@import "./blocks/card";
+@import '../../theme/widgets/widgets-left';
 
 .widget {
   display: inline-block;
