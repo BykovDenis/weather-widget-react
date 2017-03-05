@@ -87,5 +87,5 @@ export const getDataWeather = () => (dispatch) => {
       type: 'FETCH_WEATHER_DATA_SUCCESS',
       payload: weatherMetadata
     });
-  }, 200);
+  }, 3000);
 };

@@ -1,9 +1,10 @@
 import React, {Component, PropTypes} from 'react';
 
 export default
-class WeatherWidget15 extends Component {
+class WeatherWidget5 extends Component {
   static propTypes = {
-    attrWeather: PropTypes.object.isRequired
+    attrWeather: PropTypes.object.isRequired,
+    widgetId: PropTypes.string.isRequired
   };
   constructor(props) {
     super(props);
@@ -12,7 +13,13 @@ class WeatherWidget15 extends Component {
     console.dir(this.props);
   }
   render() {
-    const widgetStyle = require('./WeatherWidget15.scss');
+    let widgetStyle;
+    if (this.props.widgetId === '05') {
+      widgetStyle = require('./WeatherWidget_05.scss');
+    }
+    if (this.props.widgetId === '15') {
+      widgetStyle = require('./WeatherWidget_15.scss');
+    }
     return (
       <div className={widgetStyle.widget}>
         <div className={widgetStyle.header}>
