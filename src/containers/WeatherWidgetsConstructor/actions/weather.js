@@ -59,10 +59,11 @@ let weatherMetadata = {
   windSpeed: 'Wind: 6.0 m/s Moderate breeze',
   windSpeed2: '6.0 m/s',
   windDirection: 'Southwest',
-  clouds: 'undefined',
+  clouds: '10',
   humidity: '64 %',
   pressure: '1013 mb',
-  icon: '04d'
+  icon: '04d',
+  naturalPhenomenon: 'clear'
 };
 
 function getHTTP() {
@@ -72,7 +73,6 @@ function getHTTP() {
       return response.json();
     })
     .then((weather) => {
-      console.dir('firstly', weather);
       mockAPIdata.fromAPI = weather;
       const parseData = new PrepareWeatherData();
       parseData.weafterData = mockAPIdata;
@@ -81,11 +81,16 @@ function getHTTP() {
 }
 
 export const getDataWeather = () => (dispatch) => {
+  getHTTP();
+  dispatch({
+    type: 'FETCH_WEATHER_DATA_SUCCESS',
+    payload: weatherMetadata
+  });
   setInterval(() => {
     getHTTP();
     dispatch({
       type: 'FETCH_WEATHER_DATA_SUCCESS',
       payload: weatherMetadata
     });
-  }, 3000);
+  }, 10000);
 };

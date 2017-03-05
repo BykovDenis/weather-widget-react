@@ -15,4 +15,5 @@ export WidgetForm from './WidgetForm/WidgetForm';
 
 /* Компоненты погожные виджеты */
 export WeatherWidget from './WeatherWidget/WeatherWidget';
+export WeatherWidget2 from './WeatherWidget2/WeatherWidget2';
 export WeatherWidget5 from './WeatherWidget5/WeatherWidget5';

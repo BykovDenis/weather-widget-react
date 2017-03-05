@@ -1,0 +1,38 @@
+@import '../../theme/styles';
+@import "./blocks/widget";
+@import "./blocks/layout";
+@import "./blocks/header";
+@import "./blocks/title";
+@import "./blocks/menu";
+@import "./blocks/card";
+
+.widget {
+  display: inline-block;
+  vertical-align: top;
+  width: 225px;
+  background-color: $color-white;
+}
+
+.header {
+  background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+}
+
+.menu {
+  width: 225px;
+  background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+  &__layout {
+    width: 167px;
+    border-bottom: 2px solid $color-pink;
+  }
+  &__links {
+    background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+    float: none;
+    text-align: center;
+  }
+  &__links &__layout {
+    width: 195px;
+    border-bottom: none;
+    padding: 10px 0 14px;
+    border-top: 2px solid $color-pink;
+  }
+}

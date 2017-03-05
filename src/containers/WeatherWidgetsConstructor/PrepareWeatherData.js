@@ -78,7 +78,8 @@ export default class PrepareWeatherData {
       clouds: `${this.getParentSelectorFromObject(this.weather.clouds, this.weather.fromAPI.clouds.all, 'min', 'max')}`,
       humidity: `${this.weather.fromAPI.main.humidity} %`,
       pressure: `${this.weather.fromAPI.main.pressure} mb`,
-      icon: `${this.weather.fromAPI.weather[0].icon}`
+      icon: `${this.weather.fromAPI.weather[0].icon}`,
+      naturalPhenomenon: `${this.weather.naturalPhenomenon.description[this.weather.fromAPI.weather[0].id]}`
     };
   }
 }

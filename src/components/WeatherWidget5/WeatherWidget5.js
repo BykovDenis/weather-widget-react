@@ -9,25 +9,19 @@ class WeatherWidget5 extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    console.dir(this.props);
-  }
   render() {
     let widgetStyle;
-    if (this.props.widgetId === '05') {
-      widgetStyle = require('./WeatherWidget_05.scss');
-    }
-    if (this.props.widgetId === '15') {
-      widgetStyle = require('./WeatherWidget_15.scss');
+    if (this.props.widgetId) {
+      widgetStyle = require(`./WeatherWidget_${this.props.widgetId}.scss`);
     }
     return (
       <div className={widgetStyle.widget}>
         <div className={widgetStyle.header}>
           <div className={widgetStyle.layout}>
             <h1 className={widgetStyle.title}>{`${this.props.attrWeather.cityName}, ${this.props.attrWeather.country}`}</h1>
-            <p className={widgetStyle.description}>shower snow</p>
+          <p className={widgetStyle.description}>shower snow</p>
           </div>
-          <img width="128" height="128" alt="Weather in Moscow, RU" className={widgetStyle.icon} src="http://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/13d.png" />
+          <img width="128" height="128" alt="Weather in Moscow, RU" className={widgetStyle.icon} src={`http://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.attrWeather.icon}.png`} />
         </div>
         <div className={widgetStyle.weather}>
           <div className={widgetStyle.weather__layout}>

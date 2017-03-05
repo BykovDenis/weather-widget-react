@@ -1,19 +1,19 @@
-@import '../../theme/variables';
+@import '../../theme/styles';
 
 .widget {
   width: 300px;
   border-radius: 6px;
   margin: 0 auto;
   box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
-  background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+  background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
 }
 
 .header {
   position: relative;
+  background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  color: #fff;
   border-radius: 6px 6px 0 0;
   width: inherit;
-  background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
-  color: #333;
 }
 
 .layout {
@@ -25,12 +25,12 @@
   font: 600 18px/1 "Roboto",Arial,sans-serif;
   margin: 0;
   letter-spacing: 1px;
-  color: #333;
+  color: #fff;
 }
 
 .description {
   font: 100 14px/1 "Roboto",Arial,sans-serif;
-  color: #333;
+  color: #fff;
   margin: 0;
 }
 
@@ -45,7 +45,7 @@
 
 
 .weather {
-  background-color: #fff;
+  background: linear-gradient(to top left,#ddf730,#f1f029);
 
   &__layout {
     position: relative;
@@ -67,7 +67,7 @@
 
 .weatherCard {
   font: 600 18px/1 "Oswald",Arial,sans-serif;
-  color: #333;
+  color: #fff;
 }
 
 .weatherTable {
@@ -127,19 +127,19 @@
 
 .link {
   font: 600 20px/1 "Roboto",Arial,sans-serif;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   padding-left: 3px;
   border: 0;
 
   &:hover {
     text-decoration: none;
-    color: #333;
+    color: #fff;
   }
 
   &:active {
     text-decoration: none;
-    color: #333;
+    color: #fff;
   }
 
   &:before {
@@ -150,13 +150,13 @@
     padding-right: 5px;
     display: inline-block;
     vertical-align: top;
-    background: url(http://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/logo_20x20_black.png) 0 0 no-repeat;
+    background: url($base-url + 'img/widgets/logo_white.png') 0 0 no-repeat;
   }
 
 }
 
 .date {
   font: 400 10px/1 "Roboto",Arial,sans-serif;
-  color: #333;
+  color: #fff;
 }
 

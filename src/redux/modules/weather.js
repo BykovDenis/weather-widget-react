@@ -11,7 +11,8 @@ const initialState = {
   clouds: '0',
   humidity: '64 %',
   pressure: '1013 mb',
-  icon: '04d'
+  icon: '04d',
+  naturalPhenomenon: 'clear'
 };
 
 export default function reducer(state = initialState, action) {
