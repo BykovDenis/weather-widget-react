@@ -13,6 +13,8 @@ class WeatherWidget2 extends Component {
     let widgetStyle;
     if (this.props.widgetId) {
       widgetStyle = require(`./WeatherWidget_${this.props.widgetId}.scss`);
+    } else {
+      return '';
     }
     return (
       <div className={widgetStyle.widget}>
@@ -26,7 +28,10 @@ class WeatherWidget2 extends Component {
             <div className={widgetStyle.card__row1}>
               <img src={`http://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.attrWeather.icon}.png`} className={widgetStyle.card__img} width="128" height="128" alt="Weather for Moscow" />
               <div className={widgetStyle.card__col}>
-                <p className={widgetStyle.card__number}>{this.props.attrWeather.temperature}<span className={widgetStyle.card__degree}>°</span></p><span className={widgetStyle.card__rising}>and rising</span>
+                <p className={widgetStyle.card__number}>
+                  {this.props.attrWeather.temperature}
+                  <span className={widgetStyle.card__degree}>°</span></p>
+                <span className={widgetStyle.card__rising}>and rising</span>
               </div>
             </div>
             <div>

@@ -1,0 +1,36 @@
+@import "../../theme/styles";
+@import "../../theme/widgets/widgets-left";
+
+.widget {
+  &__footer {
+    background: none !important;
+    padding-top: 3px;
+  }
+
+  &__footer &__link{
+    color: $color-black;
+    font-size: #{$font-size - 2px};
+    margin-left: 5px;
+  }
+
+  &__footer  &__link:before{
+    padding: 0;
+    margin-right: 3px;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background: url($base-url+'img/widgets/logo_20x20_black.png') 0 2px no-repeat;
+    background-size: 13px 13px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__footer &__date{
+    float: right;
+    margin-right: 5px;
+    padding-top: 2px;
+    color: $color-black;
+    font-size: #{$font-size - 2px};
+  }
+
+}
