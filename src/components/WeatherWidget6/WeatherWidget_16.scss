@@ -1,0 +1,94 @@
+@import "../../theme/styles";
+@import "../../theme/widgets/widgets-right";
+
+.widget {
+  width: 120px;
+  background-image: linear-gradient(to bottom, $color-orange, $color-light-orange);
+
+  &__title{
+    filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+  }
+
+  &__layout {
+    margin-left: 0;
+    padding: 5px 0;
+    text-align: center;
+    color: $color-black;
+  }
+
+  &__footer &__layout{
+    padding-right: 0;
+  }
+
+  &__description{
+    filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+    font: 100 #{$font-size - 2px} / 1 $font-roboto;
+    color: $color-black;
+    margin: 0;
+  }
+
+  &__icon {
+    top: -40px;
+  }
+
+  &__date {
+    filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+    font: 400 #{$font-size - 4px} / 1 $font-roboto;
+    color: $color-white;
+  }
+
+  &__title{
+    color: $color-black;
+    font-size: #{$font-size - 2px};
+  }
+
+  &__footer{
+    background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
+    color: $color-black;
+  }
+
+  &__footer &__link{
+    filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+    font-size: #{$font-size - 3px};
+    font-weight: 400;
+    margin:0 auto;
+    padding-top: 2px;
+    color: $color-black;
+    border-bottom: none;
+  }
+
+  &__footer &__link:before{
+    padding: 0;
+    margin-right: 3px;
+    content:'';
+    width: 14px;
+    height: 14px;
+    background: url($base-url + 'img/widgets/logo_20x20_black.png') 0 0 no-repeat;
+    background-size: 14px 14px ;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.weather {
+  width: 120px;
+  background: $color-white;
+
+  &__layout {
+    display: flex;
+    padding: 27px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 98px;
+  }
+
+  &__temperature {
+    font-size: #{$font-size*3 + 11px};
+    text-align: center;
+  }
+}
+
+.table {
+  background: $color-white;
+}
