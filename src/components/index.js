@@ -19,3 +19,4 @@ export WeatherWidget2 from './WeatherWidget2/WeatherWidget2';
 export WeatherWidget3 from './WeatherWidget3/WeatherWidget3';
 export WeatherWidget4 from './WeatherWidget4/WeatherWidget4';
 export WeatherWidget5 from './WeatherWidget5/WeatherWidget5';
+export WeatherWidget5Alternative from './WeatherWidget5_alternative/WeatherWidget5_alternative';
