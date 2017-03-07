@@ -28,18 +28,20 @@ class WeatherWidget7 extends Component {
           <div className={widgetStyle.weather__layout}>
             <div className={widgetStyle.weather__temperature}>{this.props.attrWeather.temperature}<span>°</span></div>
             <table className={widgetStyle.table}>
-              <tr className={widgetStyle.table__items}>
-                <td className={widgetStyle.table__item}>Feels Like</td>
-                <td className={widgetStyle.table__item}>{this.props.attrWeather.temperature}<span>°</span></td>
-              </tr>
-              <tr className={widgetStyle.table__items}>
-                <td className={widgetStyle.table__item}>Wind</td>
-                <td className={widgetStyle.table__item}>{this.props.attrWeather.windSpeed2.replace('Wind:', '')} {this.props.attrWeather.windDirection.substr(0, 1)}</td>
-              </tr>
-              <tr className={widgetStyle.table__items}>
-                <td className={widgetStyle.table__item}>Pessure</td>
-                <td className={widgetStyle.table__item}>{this.props.attrWeather.pressure}</td>
-              </tr>
+              <tbody>
+                <tr className={widgetStyle.table__items}>
+                  <td className={widgetStyle.table__item}>Feels Like</td>
+                  <td className={widgetStyle.table__item}>{this.props.attrWeather.temperature}<span>°</span></td>
+                </tr>
+                <tr className={widgetStyle.table__items}>
+                  <td className={widgetStyle.table__item}>Wind</td>
+                  <td className={widgetStyle.table__item}>{this.props.attrWeather.windSpeed2.replace('Wind:', '')} {this.props.attrWeather.windDirection.substr(0, 1)}</td>
+                </tr>
+                <tr className={widgetStyle.table__items}>
+                  <td className={widgetStyle.table__item}>Pessure</td>
+                  <td className={widgetStyle.table__item}>{this.props.attrWeather.pressure}</td>
+                </tr>
+              </tbody>
              </table>
           </div>
         </div>

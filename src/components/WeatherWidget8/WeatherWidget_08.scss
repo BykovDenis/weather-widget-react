@@ -1,0 +1,119 @@
+@import "../../theme/styles";
+@import "../../theme/widgets/widgets-right";
+
+.widget {
+  width: 300px;
+  background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  background: none;
+  box-shadow: none;
+
+  &__title{
+    font: 600 #{$font-size} / 1 $font-roboto;
+    color: $color-black;
+    margin-bottom: 5px;
+    filter: none;
+  }
+
+  &__layout {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+  }
+
+  &__footer &__layout{
+    padding-right: 0;
+  }
+
+  &__description{
+    font: 400 #{$font-size - 4px} / 1 $font-roboto;
+    color: $color-black;
+    filter: none;
+  }
+
+  &__icon {
+    top: -40px;
+  }
+
+  &__title{
+    color: $color-white;
+    font-size: #{$font-size - 2px};
+  }
+
+  &__footer{
+    background: none;
+    color: $color-white;
+  }
+
+  &__footer &__link{
+    font-weight: 400;
+    margin:0 auto;
+    padding-top: 2px;
+    border-bottom: none;
+    color: $color-light-blue3;
+    font-size: #{$font-size - 2px};
+    margin-left: -5px;
+    filter: none;
+  }
+
+  &__footer &__link:before{
+    padding: 0;
+    margin-right: 3px;
+    content:'';
+    width: 13px;
+    height: 13px;
+    background: url($base-url + 'img/widgets/logo_13x13_blue.png') 0 0 no-repeat;
+    background-size: 13px 13px ;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__footer &__layout {
+    background: none;
+  }
+
+  &__footer &__date {
+    filter: none;
+    font: 400 #{$font-size - 4px} / 1 $font-roboto;
+    color: $color-light-blue3;
+  }
+}
+
+.weather {
+  width: 300px;
+  background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+
+  &__layout {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 98px;
+  }
+
+  &__temperature {
+    padding-left: 6px;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    width: 57px;
+    text-align: center;
+    font-size: #{$font-size * 2 + 2px};
+  }
+
+  &__icon {
+    background-color: $color-white;
+    transform-origin: left top;
+    transform: translateX(-50%) rotate(-2deg);
+    background-image: -webkit-linear-gradient(bottom, $color-light-blue1, $color-light-blue2);
+  }
+
+}
+
+.table {
+  background-image: linear-gradient(to top, $color-green, $color-light-green);
+}
