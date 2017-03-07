@@ -37,7 +37,7 @@ class WeatherWidget5 extends Component {
                   </tr>
                   <tr className={widgetStyle.weather__items}>
                     <td className={widgetStyle.weather__item}>Feels like</td>
-                    <td className={widgetStyle.weather__feels}>{this.props.attrWeather.temperature}<span>°</span></td>
+                    <td className={widgetStyle.weather__item}>{this.props.attrWeather.temperature}<span>°</span></td>
                   </tr>
                   <tr className={widgetStyle.weather__items}>
                     <td className={widgetStyle.weather__item}>Wind</td>
@@ -47,11 +47,11 @@ class WeatherWidget5 extends Component {
                     <td className={widgetStyle.weather__item}>Humidity</td>
                     <td className={widgetStyle.weather__item}>{this.props.attrWeather.humidity}</td>
                   </tr>
-                  <tr className={widgetStyle.weather__item}>
+                  <tr className={widgetStyle.weather__items}>
                     <td className={widgetStyle.weather__item}>Precip</td>
                     <td className={widgetStyle.weather__item}></td>
                   </tr>
-                  <tr className={widgetStyle.weather__item}>
+                  <tr className={widgetStyle.weather__items}>
                     <td className={widgetStyle.weather__item}>Pressure</td>
                     <td className={widgetStyle.weather__item}>{this.props.attrWeather.pressure}</td>
                   </tr>

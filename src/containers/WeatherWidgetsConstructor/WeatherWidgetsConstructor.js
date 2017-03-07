@@ -6,6 +6,7 @@ import { WeatherWidget2 } from 'components';
 import { WeatherWidget3 } from 'components';
 import { WeatherWidget4 } from 'components';
 import { WeatherWidget5 } from 'components';
+import { WeatherWidget7 } from 'components';
 import {connect} from 'react-redux';
 import { getDataWeather } from './actions/weather';
 
@@ -38,6 +39,8 @@ export default class WeatherWidgetsConstructor extends Component {
           </div>
           <WeatherWidget5 attrWeather={this.props.currentStore.weather} widgetId="05" />
           <WeatherWidget5 attrWeather={this.props.currentStore.weather} widgetId="15" />
+          <WeatherWidget7 attrWeather={this.props.currentStore.weather} widgetId="07" />
+          <WeatherWidget7 attrWeather={this.props.currentStore.weather} widgetId="17" />
         </div>
       </div>
     );
