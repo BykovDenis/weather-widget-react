@@ -2,8 +2,6 @@
 @import '../../theme/widgets/widgets-left';
 
 .widget {
-  display: inline-block;
-  vertical-align: top;
   width: 225px;
   background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
 }

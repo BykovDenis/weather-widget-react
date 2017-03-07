@@ -14,7 +14,7 @@
   }
 
   &__footer &__link{
-    color: $color-black;
+    color: $color-orange1;
     font-size: #{$font-size - 2px};
     margin-left: 5px;
     border-bottom: none;
@@ -26,7 +26,7 @@
     content:'';
     width: 15px;
     height: 15px;
-    background: url($base-url + 'img/widgets/logo_20x20_black.png') 0 2px no-repeat;
+    background: url($base-url + 'img/widgets/logo_20x20_orange.png') 0 2px no-repeat;
     background-size: 13px 13px;
     display: inline-block;
     vertical-align: top;
@@ -36,7 +36,7 @@
     float: right;
     margin-right: 5px;
     padding-top: 2px;
-    color: $color-black;
+    color: $color-orange1;
     font-size: #{$font-size - 2px};
   }
 
@@ -48,7 +48,7 @@
   border-radius: 6px;
   min-height: 58px;
   box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
-  background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+  background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
 
   &__layout{
     border-bottom: 2px solid $color-pink;
@@ -63,7 +63,7 @@
   }
 
   &__links {
-    background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+    background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
   }
 }
 
@@ -78,13 +78,13 @@
 
   /* маленький виджет */
   &__item {
-    padding: 13px 2px;
+    padding: 13px 13px;
     display: inline-block;
     vertical-align: top;
   }
 
   &__item{
-    background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+    background-color: $color-white;
   }
 }
 

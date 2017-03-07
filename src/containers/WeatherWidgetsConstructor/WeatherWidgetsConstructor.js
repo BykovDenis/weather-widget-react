@@ -4,6 +4,7 @@
 import React, {Component, PropTypes} from 'react';
 import { WeatherWidget2 } from 'components';
 import { WeatherWidget3 } from 'components';
+import { WeatherWidget4 } from 'components';
 import { WeatherWidget5 } from 'components';
 import {connect} from 'react-redux';
 import { getDataWeather } from './actions/weather';
@@ -27,8 +28,14 @@ export default class WeatherWidgetsConstructor extends Component {
         <div className={widgetStyle.container}>
           <WeatherWidget2 attrWeather={this.props.currentStore.weather} widgetId="02" />
           <WeatherWidget2 attrWeather={this.props.currentStore.weather} widgetId="12" />
-          <WeatherWidget3 attrWeather={this.props.currentStore.weather} widgetId="03" />
-          <WeatherWidget3 attrWeather={this.props.currentStore.weather} widgetId="03" />
+          <div>
+            <WeatherWidget3 attrWeather={this.props.currentStore.weather} widgetId="03" />
+            <WeatherWidget3 attrWeather={this.props.currentStore.weather} widgetId="13" />
+          </div>
+          <div>
+            <WeatherWidget4 attrWeather={this.props.currentStore.weather} widgetId="04" />
+            <WeatherWidget4 attrWeather={this.props.currentStore.weather} widgetId="14" />
+          </div>
           <WeatherWidget5 attrWeather={this.props.currentStore.weather} widgetId="05" />
           <WeatherWidget5 attrWeather={this.props.currentStore.weather} widgetId="15" />
         </div>

@@ -1,10 +1,10 @@
 /**
- * Created by bykovdenis on 06.03.17.
+ * Created by bykovdenis on 07.03.17.
  */
 import React, {Component, PropTypes} from 'react';
 
 export default
-class WeatherWidget3 extends Component {
+class WeatherWidget4 extends Component {
   static propTypes = {
     attrWeather: PropTypes.object.isRequired,
     widgetId: PropTypes.string.isRequired

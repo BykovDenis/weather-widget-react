@@ -1,9 +1,16 @@
 .widgetTitle {
   text-align: center;
 }
+
 .container {
+  max-width: 800px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  & > div {
+    margin-right: 15px;
+  }
 }

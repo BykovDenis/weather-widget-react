@@ -17,4 +17,5 @@ export WidgetForm from './WidgetForm/WidgetForm';
 export WeatherWidget from './WeatherWidget/WeatherWidget';
 export WeatherWidget2 from './WeatherWidget2/WeatherWidget2';
 export WeatherWidget3 from './WeatherWidget3/WeatherWidget3';
+export WeatherWidget4 from './WeatherWidget4/WeatherWidget4';
 export WeatherWidget5 from './WeatherWidget5/WeatherWidget5';
