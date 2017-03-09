@@ -12,7 +12,8 @@ const initialState = {
   humidity: '64 %',
   pressure: '1013 mb',
   icon: '04d',
-  naturalPhenomenon: 'clear'
+  naturalPhenomenon: 'clear',
+  dateReport: '20:16 Mar 28'
 };
 
 export default function reducer(state = initialState, action) {

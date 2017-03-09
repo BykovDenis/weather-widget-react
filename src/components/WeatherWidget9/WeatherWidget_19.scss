@@ -3,6 +3,7 @@
 
 .widget {
   width: 300px;
+  background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
   background: none;
   box-shadow: none;
 
@@ -21,7 +22,7 @@
     align-items: center;
     padding: 5px 10px;
     border-radius: 3px;
-    background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+    background-image: linear-gradient(to bottom, $color-orange, $color-light-orange);
   }
 
   &__description{
@@ -99,11 +100,11 @@
   }
 
   &__icon {
-    background: $color-white;
-    transform-origin: left top;
-    transform: translateX(-50%) rotate(-2deg);
-    top: -30px;
-    box-shadow: 0 0 1px rgba(0,0,0,.2);
+    display: block;
+    top: -48px;
+    z-index: 100;
+    background: none;
+    transform: translateX(-50%);
   }
 
 }

@@ -21,7 +21,7 @@
     align-items: center;
     padding: 5px 10px;
     border-radius: 3px;
-    background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+    background-image: linear-gradient(to bottom, $color-orange, $color-light-orange);
   }
 
   &__description{
@@ -47,11 +47,11 @@
   &__footer &__date {
     filter: none;
     font: 400 #{$font-size - 4px} / 1 $font-roboto;
-    color: $color-light-blue3;
+    color: $color-orange1;
   }
 
   &__footer &__link{
-    color: $color-light-blue3;
+    color: $color-orange1;
     font-size: #{$font-size - 2px};
     margin-left: 0;
     filter: none;
@@ -64,7 +64,7 @@
     content:'';
     width: 13px;
     height: 13px;
-    background: url($base-url + 'img/widgets/logo_13x13_blue.png') 0 0 no-repeat;
+    background: url($base-url + 'img/widgets/logo_20x20_orange.png') 0 0 no-repeat;
     background-size: 13px 13px ;
     display: inline-block;
     vertical-align: top;
@@ -78,7 +78,7 @@
 
 .weather {
   width: 300px;
-  background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+  background-color: $color-white;
 
   &__layout {
     display: flex;

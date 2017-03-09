@@ -1,3 +1,5 @@
+import CustomDate from '../../libraries/custom-date';
+
 export default class PrepareWeatherData {
   constructor() {
     this.weather = {};
@@ -65,6 +67,7 @@ export default class PrepareWeatherData {
    * парсинг данных погоды
    */
   mappingWeatherData() {
+    const date = new CustomDate();
     return {
       cityName: this.weather.fromAPI.name,
       country: this.weather.fromAPI.sys.country,
@@ -79,7 +82,8 @@ export default class PrepareWeatherData {
       humidity: `${this.weather.fromAPI.main.humidity} %`,
       pressure: `${this.weather.fromAPI.main.pressure} mb`,
       icon: `${this.weather.fromAPI.weather[0].icon}`,
-      naturalPhenomenon: `${this.weather.naturalPhenomenon.description[this.weather.fromAPI.weather[0].id]}`
+      naturalPhenomenon: `${this.weather.naturalPhenomenon.description[this.weather.fromAPI.weather[0].id]}`,
+      dateReport: date.getTimeDateHHMMMonthDay()
     };
   }
 }

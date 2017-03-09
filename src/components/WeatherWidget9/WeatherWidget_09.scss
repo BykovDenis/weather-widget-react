@@ -3,6 +3,7 @@
 
 .widget {
   width: 300px;
+  background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
   background: none;
   box-shadow: none;
 
@@ -74,6 +75,10 @@
 .card {
   width: auto;
   margin-bottom: 0px;
+  &__item:first-child{
+    border-right: 2px solid $color-light-blue4;
+    padding-right: 5px;
+  }
 }
 
 .weather {
@@ -99,11 +104,11 @@
   }
 
   &__icon {
-    background: $color-white;
-    transform-origin: left top;
-    transform: translateX(-50%) rotate(-2deg);
-    top: -30px;
-    box-shadow: 0 0 1px rgba(0,0,0,.2);
+    display: block;
+    top: -48px;
+    z-index: 100;
+    background: none;
+    transform: translateX(-50%);
   }
 
 }

@@ -33,7 +33,7 @@ class WeatherWidget4 extends Component {
         <div className={widgetStyle.widget__footer}>
           <div className={widgetStyle.widget__layout}>
             <a href="http://openweathermap.org/" className={widgetStyle.widget__link}>OpenWeatherMap</a>
-            <div className={widgetStyle.widget__date}>20:16 Mar 28</div>
+            <div className={widgetStyle.widget__date}>{this.props.attrWeather.dateReport}</div>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ class WeatherWidget5Alternative extends Component {
         <div className={widgetStyle.footer}>
           <div className={widgetStyle.footer__layout}>
             <a href="http://openweathermap.org/" className={widgetStyle.link}>OpenWeatherMap</a>
-            <div className={widgetStyle.date}>16:53 Feb 13</div>
+            <div className={widgetStyle.date}>{this.props.attrWeather.dateReport}</div>
           </div>
         </div>
       </div>

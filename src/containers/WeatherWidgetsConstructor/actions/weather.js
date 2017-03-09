@@ -63,7 +63,8 @@ let weatherMetadata = {
   humidity: '64 %',
   pressure: '1013 mb',
   icon: '04d',
-  naturalPhenomenon: 'clear'
+  naturalPhenomenon: 'clear',
+  dateReport: '20:16 Mar 28'
 };
 
 function getHTTP() {
